@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import user_login, dashboard, register
+from .views import user_login, dashboard, register, edit
 
 urlpatterns = [
     # url(r'^login/$', user_login, name='login'),
@@ -17,4 +17,5 @@ urlpatterns = [
     url(r'^password-reset/complete/$', 'django.contrib.auth.views.password_reset_complete',
         name='password_reset_complete'),
     url(r'^register/$', register, name='register'),
+    url(r'^edit/$', edit, name='edit'),
 ]
