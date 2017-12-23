@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import user_login, dashboard
+from .views import user_login, dashboard, register
 
 urlpatterns = [
     # url(r'^login/$', user_login, name='login'),
@@ -16,4 +16,5 @@ urlpatterns = [
         'django.contrib.auth.views.password_reset_confirm', name='password_reset_confirm'),
     url(r'^password-reset/complete/$', 'django.contrib.auth.views.password_reset_complete',
         name='password_reset_complete'),
+    url(r'^register/$', register, name='register'),
 ]
